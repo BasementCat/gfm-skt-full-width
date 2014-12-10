@@ -46,3 +46,7 @@ require_once(ABSPATH . 'wp-settings.php');
 EOT
 
 ln -s /vagrant/skt-full-width /var/www/wp-content/themes/
+
+# Finally turn on PHP errors
+sed "s/^display_errors = Off/display_errors = On/" /etc/php5/apache2/php.ini >/etc/php5/apache2/php.ini
+service apache2 restart
