@@ -45,5 +45,4 @@ if ( !defined('ABSPATH') )
 require_once(ABSPATH . 'wp-settings.php');
 EOT
 
-wget -qO - http://localhost/wp-admin/setup-config.php?step=2 \
-    --post-data 'dbname=wordpress&uname=user&pwd=password&dbhost=localhost&prefix=wp_'
+ln -s /vagrant/skt-full-width /var/www/wp-content/themes/
