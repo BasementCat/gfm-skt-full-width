@@ -14,13 +14,15 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php 
+<?php
 $slAr = array();
-for ($i=1;$i<6;$i++) {
-	if ( of_get_option('slide'.$i, true) != "" ) {
-		$imgUrl = of_get_option('slide'.$i, true);
-		if ( strlen($imgUrl) > 3 ) $slAr[] = of_get_option('slide'.$i, true);
-	}
+if (of_get_option('slider_enabled') && of_get_option('slider_navigation_enabled')) {
+    for ($i=1;$i<6;$i++) {
+    	if ( of_get_option('slide'.$i, true) != "" ) {
+    		$imgUrl = of_get_option('slide'.$i, true);
+    		if ( strlen($imgUrl) > 3 ) $slAr[] = of_get_option('slide'.$i, true);
+    	}
+    }
 }
 ?>
 <?php wp_head(); ?>

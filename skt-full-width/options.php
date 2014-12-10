@@ -118,12 +118,33 @@ function optionsframework_options() {
 		'name' => __('Homepage Slider', 'skt-full-width'),
 		'type' => 'heading');
 
-	/*$options[] = array(
+	$options[] = array(
 		'name' => __('Enable Slider', 'skt-full-width'),
 		'desc' => __('Check this to Enable Slider.', 'skt-full-width'),
 		'id' => 'slider_enabled',
 		'type' => 'checkbox',
-		'std' => '' );*/
+		'std' => '1' );
+
+	$options[] = array(
+		'name' => __('Enable Slider Navigation', 'skt-full-width'),
+		'desc' => __('Check this to Enable Slider Navigation.', 'skt-full-width'),
+		'id' => 'slider_navigation_enabled',
+		'type' => 'checkbox',
+		'std' => '1' );
+
+	$options[] = array(
+		'name' => __('Slide Interval', 'skt-full-width'),
+		'desc' => __('Duration of each image, in ms', 'skt-full-width'),
+		'id' => 'slider_slide_interval',
+		'type' => 'text',
+		'std' => '5000' );
+
+	$options[] = array(
+		'name' => __('Transition Speed', 'skt-full-width'),
+		'desc' => __('Speed of the transition between images, in ms', 'skt-full-width'),
+		'id' => 'slider_transition_speed',
+		'type' => 'text',
+		'std' => '1000' );
 		
 	$options[] = array(
 		'name' => __('Slider Image 1', 'skt-full-width'),
