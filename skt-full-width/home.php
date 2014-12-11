@@ -15,11 +15,10 @@ get_header();
 
 <?php if( is_home() && get_option('page_for_posts') ) { ?>
 
-    <div id="primary" class="content-area">
+    <div id="primary" class="content-area home">
         <div id="content" class="site-content container">
             <main id="main" class="site-main" role="main">
                 <header class="page"><h1 class="entry-title">BLOG</h1></header>
-                <div class="blog-post">
                     <?php 
                     /*$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
                     $query = new WP_Query( array( 'paged' => $paged, 'posts_per_page' => 3 ) );*/ ?>
@@ -33,8 +32,6 @@ get_header();
                     <?php else : ?>
                         <?php get_template_part( 'no-results', 'index' ); ?>
                     <?php endif; ?>
-                </div><!-- blog-post -->
-                <?php get_sidebar(); ?>
                 <div class="clear"></div>
             </main><!-- main -->
     <?php get_footer(); ?>
