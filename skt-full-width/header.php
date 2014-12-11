@@ -28,6 +28,12 @@ if (of_get_option('slider_enabled') && of_get_option('slider_navigation_enabled'
 <?php wp_head(); ?>
 </head>
 
+<?php
+    add_filter('body_class', function($classes = array()) {
+        if (is_home()) $classes[] = 'home';
+        return $classes;
+    });
+?>
 <body <?php body_class(); ?>>
 <?php
 $front_page = get_option('page_on_front');

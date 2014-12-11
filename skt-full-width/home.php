@@ -15,7 +15,7 @@ get_header();
 
 <?php if( is_home() && get_option('page_for_posts') ) { ?>
 
-    <div id="primary" class="content-area home">
+    <div id="primary" class="content-area">
         <div id="content" class="site-content container">
             <main id="main" class="site-main" role="main">
                 <header class="page"><h1 class="entry-title">BLOG</h1></header>
