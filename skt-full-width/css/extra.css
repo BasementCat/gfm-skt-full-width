@@ -1,0 +1,16 @@
+body.home #wrapper {
+    width: 97%;
+}
+body.home #primary {
+    width: 40%;
+    margin-left: 2em;
+}
+body.home #content, body.home footer, body.home .footer-bottom {
+    margin: 0;
+    width: 92%;
+    padding: 20px;
+    padding-left: 30px;
+}
+body.home footer#colophon {
+    padding-left: 30px;
+}

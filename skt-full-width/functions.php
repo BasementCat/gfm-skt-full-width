@@ -85,6 +85,7 @@ function skt_full_width_scripts() {
 	wp_enqueue_style( 'skt_full_width-editor-style', get_template_directory_uri()."/editor-style.css", array('skt_full_width-layout') );
 
 	wp_enqueue_style( 'skt_full_width-main-style', get_template_directory_uri()."/css/main.css", array('skt_full_width-layout') );
+	wp_enqueue_style( 'skt_full_width-extra-style', get_template_directory_uri()."/css/extra.css", array('skt_full_width-layout') );
 	
 	wp_enqueue_style( 'skt_full_width-supersized-default-theme', get_template_directory_uri()."/css/supersized.css" );
 	
