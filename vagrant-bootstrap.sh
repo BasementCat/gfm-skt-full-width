@@ -3,7 +3,7 @@ cd /tmp
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-apt-get install -y apache2 mysql-server php5 php-pear php5-mysql php5-common libapache2-mod-php5 php5-cli php5-gd
+apt-get install -y apache2 mysql-server php5 php-pear php5-mysql php5-common libapache2-mod-php5 php5-cli php5-gd build-essential libssl-dev
 
 # Configure MySQL
 mysqladmin -u root password 'password'
@@ -50,3 +50,9 @@ ln -s /vagrant/skt-full-width /var/www/wp-content/themes/
 # Finally turn on PHP errors
 sed "s/^display_errors = Off/display_errors = On/" /etc/php5/apache2/php.ini >/etc/php5/apache2/php.ini
 service apache2 restart
+
+
+# Install LESS compiler
+echo "deb http://http.debian.net/debian wheezy-backports main" >/etc/apt/sources.list.d/wheezy-backports.list
+apt-get update
+apt-get install -y -t wheezy-backports "node-less"
