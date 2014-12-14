@@ -86,7 +86,13 @@ $post_page = get_option('page_for_posts');
 							<?php bloginfo( 'name' ); ?>
                         <?php } ?>
                     </a></h1>
-                    <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2><br />
+                    <h2 class="site-description"><?php
+                        ob_start();
+                        bloginfo( 'description' );
+                        $info = ob_get_contents();
+                        ob_end_clean();
+                        echo str_replace("\\n", "<br />", $info);
+                    ?></h2><br />
                 </div>
               
                 <div id="site-nav">
