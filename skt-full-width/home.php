@@ -19,19 +19,30 @@ get_header();
         <div id="content" class="site-content container">
             <main id="main" class="site-main" role="main">
                 <header class="page"><h1 class="entry-title">BLOG</h1></header>
-                    <?php 
-                    /*$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
-                    $query = new WP_Query( array( 'paged' => $paged, 'posts_per_page' => 3 ) );*/ ?>
-                    <?php if( have_posts() ) : ?>
-                        <?php while( have_posts() ) : the_post(); ?>
-                            <?php get_template_part( 'content', get_post_format() ); ?>
-                        <?php endwhile; ?>
-                        <?php //skt_full_width_custom_blogpost_pagination( $query ); ?>
-                        <?php //wp_reset_postdata(); ?>
-                        <?php skt_full_width_pagination(); ?>
-                    <?php else : ?>
-                        <?php get_template_part( 'no-results', 'index' ); ?>
-                    <?php endif; ?>
+                <?php
+                    if ($cat = of_get_option('frontpage-category', ''))
+                    {
+                        global $wp_query;
+                        query_posts(array_merge($wp_query->query_vars, array('category_name' => $cat)));
+                    }
+                    if (have_posts())
+                    {
+                        while (have_posts())
+                        {
+                            the_post();
+                            get_template_part('content', get_post_format());
+                        }
+                        skt_full_width_pagination();
+                    }
+                    else
+                    {
+                        get_template_part('no-results', 'index');
+                    }
+                    if (!empty($cat))
+                    {
+                        wp_reset_query();
+                    }
+                ?>
                 <div class="clear"></div>
             </main><!-- main -->
     <?php get_footer(); ?>

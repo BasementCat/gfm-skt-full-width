@@ -111,6 +111,14 @@ function optionsframework_options() {
 		'id' => 'style2',
 		'std' => '',
 		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => __('Front Page Category', 'skt-full-width'),
+		'desc' => __('When displaying posts on the front page, limit them to this category.  Enter the slug here, not the name', 'skt-full-width'),
+		'id' => 'frontpage-category',
+		'std' => '',
+		'type' => 'text',
+	);
 	
 	//SLIDER SETTINGS
 
