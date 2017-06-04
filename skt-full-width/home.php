@@ -25,12 +25,15 @@ get_header();
                         global $wp_query;
                         query_posts(array_merge($wp_query->query_vars, array('category_name' => $cat)));
                     }
+                    $max_posts = (int) of_get_option('frontpage-postcount', '0');
+                    $post_count = 0;
                     if (have_posts())
                     {
                         while (have_posts())
                         {
                             the_post();
                             get_template_part('content', get_post_format());
+                            if ($max_posts && ++$post_count >= $max_posts) break;
                         }
                         skt_full_width_pagination();
                     }

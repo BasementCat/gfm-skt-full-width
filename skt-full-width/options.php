@@ -127,6 +127,14 @@ function optionsframework_options() {
 		'std' => '0',
 		'type' => 'checkbox',
 	);
+
+	$options[] = array(
+		'name' => __('Front Page Post Count', 'skt-full-width'),
+		'desc' => __('When displaying posts on the front page, show this many posts maximum.', 'skt-full-width'),
+		'id' => 'frontpage-postcount',
+		'std' => '0',
+		'type' => 'text',
+	);
 	
 	//SLIDER SETTINGS
 
