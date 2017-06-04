@@ -18,14 +18,7 @@
         </div><!-- post-thumb -->
 	</header><!-- .entry-header -->
 
-	DEBUG<br>
-	is_home: "<?= is_home() ?>"<br>
-	fullposts: "<?= of_get_option('frontpage-fullposts', '0') ?>"<br>
-	is_search: "<?= is_search() ?>"<br>
-	is_single: "<?= is_single() ?>"<br>
-	END DEBUG<br />
-
-	<?php if ( (!is_home() || (is_home() && of_get_option('frontpage-fullposts', '0') == '0')) && (is_search() || !is_single()) ) : // Only display Excerpts for Search ?>
+	<?php if ( of_get_option('frontpage-fullposts', '0') == '0' && (is_search() || !is_single()) ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
          <div class="read-more"><a href="<?php the_permalink(); ?>">Read More...</a></div>
