@@ -33,11 +33,24 @@
                 </div>
             </div><!-- social -->
             <div class="contact"><h2>Contact Info</h2>
-                 <h3 class="company-title"><?php echo esc_html( of_get_option('contact1', true) ); ?></h3>
-                 <p><?php echo esc_html( of_get_option('contact2', true) ); ?></p>
-                 <p><?php echo esc_html( of_get_option('contact3', true) ); ?></p>
-                 <p><strong>Phone :</strong> <?php echo esc_html( of_get_option('contact4', true) ); ?></p>
-                 <p><strong>Email :</strong> <?php echo sanitize_email( of_get_option('contact5', true) ); ?></p>
+                 <?php if (of_get_option('contact1', '')): ?>
+                    <h3 class="company-title"><?php echo esc_html( of_get_option('contact1', true) ); ?></h3>
+                 <?php endif; ?>
+                 <?php if (of_get_option('contact2', '')): ?>
+                    <p><?php echo esc_html( of_get_option('contact2', true) ); ?></p>
+                 <?php endif; ?>
+                 <?php if (of_get_option('contact3', '')): ?>
+                    <p><?php echo esc_html( of_get_option('contact3', true) ); ?></p>
+                 <?php endif; ?>
+                 <?php if (of_get_option('contact4', '')): ?>
+                    <p><strong>Phone :</strong> <?php echo esc_html( of_get_option('contact4', true) ); ?></p>
+                 <?php endif; ?>
+                 <?php if (of_get_option('contact5', '')): ?>
+                    <p><strong>Email :</strong> <?php echo sanitize_email( of_get_option('contact5', true) ); ?></p>
+                 <?php endif; ?>
+                 <?php if (of_get_option('contact6', '')): ?>
+                    <p><?php echo of_get_option('contact6', true); ?></p>
+                 <?php endif; ?>
             </div><!-- contact -->
             <div class="clear"></div>
         </div>

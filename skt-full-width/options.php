@@ -385,7 +385,13 @@ function optionsframework_options() {
 		'id' => 'contact5',
 		'std' => sanitize_email( 'info@example.com' ),
 		'type' => 'text',
-		'subtype' => 'email');	
+		'subtype' => 'email');
+
+		$options[] = array(
+		'desc' => __('Arbitrary HTML Info', 'skt-full-width'),
+		'id' => 'contact6',
+		'std' => '',
+		'type' => 'textarea');
 
 	// Support					
 		$options[] = array(
