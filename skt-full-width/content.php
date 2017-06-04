@@ -18,7 +18,7 @@
         </div><!-- post-thumb -->
 	</header><!-- .entry-header -->
 
-	<?php if ( is_search() || !is_single() ) : // Only display Excerpts for Search ?>
+	<?php if ( (!is_home() || (is_home() && of_get_option('frontpage-fullposts', '0') == '0')) && (is_search() || !is_single()) ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
          <div class="read-more"><a href="<?php the_permalink(); ?>">Read More...</a></div>

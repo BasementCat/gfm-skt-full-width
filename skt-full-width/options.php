@@ -119,6 +119,14 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'text',
 	);
+
+	$options[] = array(
+		'name' => __('Front Page Full Posts', 'skt-full-width'),
+		'desc' => __('When displaying posts on the front page, show the full post.', 'skt-full-width'),
+		'id' => 'frontpage-fullposts',
+		'std' => '0',
+		'type' => 'checkbox',
+	);
 	
 	//SLIDER SETTINGS
 
