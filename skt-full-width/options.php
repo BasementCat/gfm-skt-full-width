@@ -310,6 +310,14 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('Social Settings', 'skt-full-width'),
 		'type' => 'heading');
+
+	$options[] = array(
+		'name' => __('Social Link Heading', 'skt-full-width'),
+		'desc' => __('The heading displayed above the social media links', 'skt-full-width'),
+		'id' => 'social_heading',
+		'std' => 'Get In Touch',
+		'class' => 'mini',
+		'type' => 'text');
 	
 	$options[] = array(
 		'desc' => __('Please set the value of following fields, as per the instructions given along. If you do not want to use an icon, just leave it blank. If some icons are showing up, even when no value is set then make sure they are completely blank, and just save the options once. They will not be shown anymore.', 'skt-full-width'),
@@ -348,7 +356,112 @@ function optionsframework_options() {
 		'std' => '#',
 		'class' => 'mini',
 		'type' => 'text',
-		'subtype' => 'url');	
+		'subtype' => 'url');
+
+	$options[] = array(
+		'name' => __('Other Text: 1', 'skt-full-width'),
+		'desc' => __('Displayed link text', 'skt-full-width'),
+		'id' => 'social_other_text_1',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Other URL: 1', 'skt-full-width'),
+		'desc' => __('Link to this URL (opens in a new tab/window)', 'skt-full-width'),
+		'id' => 'social_other_url_1',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text',
+		'subtype' => 'url');
+
+	$options[] = array(
+		'name' => __('Other Image URL: 1', 'skt-full-width'),
+		'desc' => __('Display this image next to this link', 'skt-full-width'),
+		'id' => 'social_other_image_url_1',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text',
+		'subtype' => 'url');
+
+	$options[] = array(
+		'name' => __('Other Image URL - Hover: 1', 'skt-full-width'),
+		'desc' => __('Display this image next to this link on hover', 'skt-full-width'),
+		'id' => 'social_other_hover_image_url_1',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text',
+		'subtype' => 'url');
+
+	$options[] = array(
+		'name' => __('Other Text: 2', 'skt-full-width'),
+		'desc' => __('Displayed link text', 'skt-full-width'),
+		'id' => 'social_other_text_2',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Other URL: 2', 'skt-full-width'),
+		'desc' => __('Link to this URL (opens in a new tab/window)', 'skt-full-width'),
+		'id' => 'social_other_url_2',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text',
+		'subtype' => 'url');
+
+	$options[] = array(
+		'name' => __('Other Image URL: 2', 'skt-full-width'),
+		'desc' => __('Display this image next to this link', 'skt-full-width'),
+		'id' => 'social_other_image_url_2',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text',
+		'subtype' => 'url');
+
+	$options[] = array(
+		'name' => __('Other Image URL - Hover: 2', 'skt-full-width'),
+		'desc' => __('Display this image next to this link on hover', 'skt-full-width'),
+		'id' => 'social_other_hover_image_url_2',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text',
+		'subtype' => 'url');
+
+	$options[] = array(
+		'name' => __('Other Text: 3', 'skt-full-width'),
+		'desc' => __('Displayed link text', 'skt-full-width'),
+		'id' => 'social_other_text_3',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Other URL: 3', 'skt-full-width'),
+		'desc' => __('Link to this URL (opens in a new tab/window)', 'skt-full-width'),
+		'id' => 'social_other_url_3',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text',
+		'subtype' => 'url');
+
+	$options[] = array(
+		'name' => __('Other Image URL: 3', 'skt-full-width'),
+		'desc' => __('Display this image next to this link', 'skt-full-width'),
+		'id' => 'social_other_image_url_3',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text',
+		'subtype' => 'url');
+
+	$options[] = array(
+		'name' => __('Other Image URL - Hover: 3', 'skt-full-width'),
+		'desc' => __('Display this image next to this link on hover', 'skt-full-width'),
+		'id' => 'social_other_hover_image_url_3',
+		'std' => '#',
+		'class' => 'mini',
+		'type' => 'text',
+		'subtype' => 'url');
 
 	
 	// Contact Details

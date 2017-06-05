@@ -15,7 +15,7 @@
             <div class="footer-menu"><h2>Main Menu</h2>
                 <?php wp_nav_menu( array('theme_location' => 'primary', 'container' => '', 'menu_class' => '') ); ?>
             </div><!-- footer-menu -->
-            <div class="social"><h2>Get In Touch</h2>
+            <div class="social"><h2><?php echo of_get_option('social_heading', true); ?></h2>
                 <div class="container">
                     <?php if ( of_get_option('facebook', true) != "") { ?>
                      <a target="_blank" href="<?php echo esc_url(of_get_option('facebook', true)); ?>" title="Facebook" ><div class="fb">Facebook</div></a>
@@ -29,6 +29,29 @@
                      <?php if ( of_get_option('linkedin', true) != "") { ?>
                      <a target="_blank" href="<?php echo esc_url(of_get_option('linkedin', true)); ?>" title="Linkedin" ><div class="linkedin">Linkedin</div></a>
                      <?php } ?>
+
+                     <style>
+                        <?php foreach (array(1, 2, 3) as $num): ?>
+                            <?php if (of_get_option('social_other_text_' . $num, true)): ?>
+                                .social.customsocial-<?php echo $num; ?> {
+                                    width:100%; margin:0 0 9px; padding:2px 0 0 40px; background:url(<?php echo esc_url(of_get_option('social_other_image_url_' . $num, true)); ?>) no-repeat scroll 0 0; height:21px;
+                                }
+                                .social.customsocial-<?php echo $num; ?>:hover {
+                                    background: url(<?php echo esc_url(of_get_option('social_other_hover_image_url_' . $num, true)); ?>) no-repeat scroll 0 0;
+                                }
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </style>
+
+                     <?php foreach (array(1, 2, 3) as $num): ?>
+                        <?php if (of_get_option('social_other_text_' . $num, true) && of_get_option('social_other_url_' . $num, true)): ?>
+                            <a target="_blank" href="<?php echo esc_url(of_get_option('social_other_url_' . $num, true)); ?>" title="<?php echo of_get_option('social_other_text_' . $num, true); ?>">
+                                <div class="social customsocial-<?php echo $num; ?>">
+                                    <?php echo of_get_option('social_other_text_' . $num, true); ?>
+                                </div>
+                            </a>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                     
                 </div>
             </div><!-- social -->
