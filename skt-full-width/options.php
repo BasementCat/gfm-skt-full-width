@@ -104,6 +104,14 @@ function optionsframework_options() {
 			'left' => $imagepath . '2cl.png',
 			'right' => $imagepath . '2cr.png')
 	);
+
+	$options[] = array(
+		'name' => __('Show Right Sidebar', 'skt-full-width'),
+		'desc' => __('Show the right sidebar'),
+		'id' => 'show-right-sidebar',
+		'std' => '1',
+		'type' => 'checkbox',
+	);
 	
 	$options[] = array(
 		'name' => __('Custom CSS', 'skt-full-width'),
